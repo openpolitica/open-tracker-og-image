@@ -2,6 +2,7 @@ import * as CUI from '@chakra-ui/react';
 import OpenLogo from 'public/images/icons/open-logo.svg';
 import Separator from 'public/images/icons/separator.svg';
 import TukuLogo from 'public/images/icons/tuku-logo.svg';
+import { background } from 'images/bg';
 
 export function Bill({
   title,
@@ -23,7 +24,7 @@ export function Bill({
       pr={90}
       pb={62}
       fontFamily="Clash Display"
-      backgroundImage="url(/images/og-bg.png)"
+      backgroundImage={`url(data:image/png;charset=utf-8;base64,${background})`}
       backgroundSize="cover">
       <CUI.Heading
         as="h1"
