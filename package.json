@@ -1,0 +1,50 @@
+{
+  "name": "open-tracker-og-image",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ext js .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint-only": "eslint --ext .js",
+    "lint-only:fix": "npm run lint-only -- --fix",
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "precommit": "lint-staged",
+    "optimize:svg": "node ./scripts/optimize-svg.js"
+  },
+  "lint-staged": {
+    "*.{js,jsx,css}": [
+      "npm run lint-only"
+    ]
+  },
+  "devDependencies": {
+    "@svgr/webpack": "6.2.1",
+    "@typescript-eslint/eslint-plugin": "5.26.0",
+    "@typescript-eslint/parser": "5.26.0",
+    "babel-eslint": "10.1.0",
+    "error": "10.4.0",
+    "eslint": "8.16.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-react-app": "7.0.1",
+    "eslint-plugin-better-styled-components": "1.1.2",
+    "eslint-plugin-flowtype": "8.0.3",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.30.0",
+    "eslint-plugin-react-hooks": "4.5.0",
+    "husky": "8.0.1",
+    "lint-staged": "12.4.3",
+    "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "styled-components": "5.3.5",
+    "svgo": "2.8.0"
+  }
+}
