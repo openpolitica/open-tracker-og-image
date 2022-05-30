@@ -22,6 +22,9 @@ const style = `
 
 export default withOGImage({
   strategy: 'query', // Query strategy is the default one
+  dev: {
+    inspectHtml: false,
+  },
   template: {
     react: async props => {
       const response = await fetch(`${process.env.api}bill/${props.billId}`);
@@ -41,7 +44,12 @@ export default withOGImage({
             <meta charSet="UTF-8" />
             <style dangerouslySetInnerHTML={{ __html: style }} />
           </head>
-          <body style={{ width: '1200px', height: '630px', margin: '0pt' }}>
+          <body
+            style={{
+              width: '1200px',
+              height: '630px',
+              margin: '0pt',
+            }}>
             <Bill
               title={upperCaseFirstLetter(bill.title)}
               authorName={authorName}
