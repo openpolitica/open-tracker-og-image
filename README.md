@@ -1,7 +1,9 @@
-# Proyecto Next.js de OpenPolítica
+# Proyecto OG Image generator de OpenPolítica
+
+> ⚠️ **Importante:** Para desplegar este repositorio en Vercel es necesario configurar en el proyecto de Vercel (menú `Settings`) para que utilice la versión de **Node 14.x**. No funciona ni con versiones inferiores ni superiores a esa, dadas las dependencias de librerías de la versión del chrome-aws-lambda.
 
 Este es un proyecto generado con el script
-[`create-openpolitica-nextjs-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) desarrollado por el equipo de OpenPolítica basado en el script original de Nextjs 
+[`create-openpolitica-nextjs-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) desarrollado por el equipo de OpenPolítica basado en el script original de Nextjs
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 El proyecto es una adaptación de la plantilla por defecto de Nextjs con
@@ -13,7 +15,7 @@ desarrollo tales como ESLint, Prettier y Husky.
 El proyecto incluye los scripts por defecto de Next.js:
 
 - `yarn dev`: inicia el servidor en modo de desarrollo en
-		[http://localhost:3000](http://localhost:3000).
+  [http://localhost:3000](http://localhost:3000).
 
 - `yarn build`: compila la aplicación.
 
@@ -27,17 +29,17 @@ como una modificación del script original `create-next-app`:
 - `yarn lint:fix`: trata de corregir según las reglas de ESLint todos los archivos de javascript del proyecto (especialmente las reglas de Prettier).
 
 - `yarn lint-only`: verifica las reglas de ESLint solamente en los archivos que se
-		especifiquen.
+  especifiquen.
 
 - `yarn lint-only:fix`: trata de corregir según las reglas de ESLint solamente en los archivos que se
-		especifiquen.
+  especifiquen.
 
 - `yarn prepare`/`yarn postinstall`: hook de instalación de husky, ejecutado
-		cada vez que se instala un nuevo paquete.
+  cada vez que se instala un nuevo paquete.
 
 - `yarn optimize:svg`: ejecuta el script de optimización de svg, localizado en
-		`scripts/optimize-svg.js` que aplica las reglas de svgo a los iconos svg
-		ubicados en `public/images/icons`, salvo aquellos en la lista `blacklist`.
+  `scripts/optimize-svg.js` que aplica las reglas de svgo a los iconos svg
+  ubicados en `public/images/icons`, salvo aquellos en la lista `blacklist`.
 
 Como parte de la configuración de Husky, cada vez que se realice un commit se
 ejecuta `nxp --no-install lintstaged`, el cual verifica las reglas de ESLint
