@@ -49,6 +49,7 @@ export default withOGImage({
               width: '1200px',
               height: '630px',
               margin: '0pt',
+              fontSize: '24px',
             }}>
             <Bill
               title={upperCaseFirstLetter(bill.title)}
