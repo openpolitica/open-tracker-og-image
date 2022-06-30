@@ -35,7 +35,8 @@ export default withOGImage({
         author => author.authorship_type === 'AUTOR',
       )?.congressperson;
       const authorName =
-        authorInfo && `${authorInfo.id_name} ${authorInfo.id_first_surname}`;
+        authorInfo &&
+        `${authorInfo.id_name.split(' ')[0]} ${authorInfo.id_first_surname}`;
       const authorImageUrl = authorInfo?.plenary.link_photo;
 
       return (
