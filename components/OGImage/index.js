@@ -7,6 +7,7 @@ import { background } from 'images/bg';
 export function Bill({
   title,
   authorName,
+  authorGender,
   authorImageUrl,
   presentationDate,
   parliamentaryGroupName,
@@ -46,7 +47,7 @@ export function Bill({
       {authorName ? (
         <CUI.Box position="absolute" bottom={62} left={90} fontSize="1.25rem">
           <CUI.Text fontWeight="bold" mt="0rem" mb="1rem">
-            Autor del proyecto
+            {authorGender === 'F' ? 'Autora' : 'Autor'} del proyecto
           </CUI.Text>
           <CUI.Flex align="center">
             {authorImageUrl ? (
