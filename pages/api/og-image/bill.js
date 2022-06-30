@@ -34,6 +34,7 @@ export default withOGImage({
       const authorInfo = bill.authorship.find(
         author => author.authorship_type === 'AUTOR',
       )?.congressperson;
+      const authorGender = authorInfo && authorInfo.id_gender;
       const authorName =
         authorInfo &&
         `${authorInfo.id_name.split(' ')[0]} ${authorInfo.id_first_surname}`;
@@ -55,6 +56,7 @@ export default withOGImage({
             <Bill
               title={upperCaseFirstLetter(bill.title)}
               authorName={authorName}
+              authorGender={authorGender}
               authorImageUrl={authorImageUrl}
               presentationDate={formatDate(presentationDate)}
             />
